@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>372</width>
-    <height>317</height>
+    <width>750</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -86,6 +86,19 @@
    </property>
    <property name="text">
     <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>370</y>
+     <width>111</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>The Good Button</string>
    </property>
   </widget>
  </widget>
@@ -187,11 +200,28 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>do_something()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>384</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>itemclick()</slot>
   <slot>additem()</slot>
   <slot>removeitem()</slot>
   <slot>saveitem()</slot>
+  <slot>do_something()</slot>
  </slots>
 </ui>

@@ -3,12 +3,16 @@ from PySide import QtCore, QtGui
 from PySide.QtGui import QMessageBox
 
 from dialog import Ui_Dialog
+import envars
 
 class MyMainWindow(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MyMainWindow, self).__init__(parent)
         self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+
+    def do_something(self):
+        print "I'm doing something!"
 
     def accept(self):
         """save the path var and exit"""
@@ -61,20 +65,8 @@ if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     myapp = MyMainWindow()
     #setup the data
-    paths = [r"c:\windows", 
-            r"c:\python27", 
-            r"c:\pypy",
-            "dummy a",
-            "dummy b",
-            "dummy c",
-            "dummy d",
-            "dummy e",
-            "dummy f",
-            "dummy g",
-            "dummy h",
-            "dummy i",
-            "dummy j"] 
-  
+
+    paths = envars.get_path()
     for p in paths:
         myapp.ui.pathList.addItem(p)
     

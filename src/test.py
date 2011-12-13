@@ -2,13 +2,13 @@ import sys
 from PySide import QtCore, QtGui
 from PySide.QtGui import QMessageBox
 
-from dialog import Ui_Dialog
+from dialog import Ui_MainWindow
 import envars
 
 class MyMainWindow(QtGui.QMainWindow):
     def __init__(self, parent=None):
         super(MyMainWindow, self).__init__(parent)
-        self.ui = Ui_Dialog()
+        self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
     def do_something(self):

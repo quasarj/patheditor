@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
+ <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
   <property name="geometry">
    <rect>
-    <x>20</x>
-    <y>20</y>
+    <x>0</x>
+    <y>0</y>
     <width>682</width>
     <height>518</height>
    </rect>
@@ -14,14 +14,6 @@
    <string>Path Edit</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>533</width>
-     <height>383</height>
-    </rect>
-   </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -107,11 +99,6 @@
           <string>Add</string>
          </property>
         </widget>
-        <zorder>cmdDown</zorder>
-        <zorder>cmdUp</zorder>
-        <zorder>cmdDelete</zorder>
-        <zorder>cmdAdd</zorder>
-        <zorder>pathList</zorder>
        </widget>
       </item>
      </layout>
@@ -183,10 +170,6 @@
           <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
          </property>
         </widget>
-        <zorder>cmdSave</zorder>
-        <zorder>buttonBox</zorder>
-        <zorder>lineEdit</zorder>
-        <zorder>lineEdit</zorder>
        </widget>
       </item>
      </layout>
@@ -195,11 +178,11 @@
   </widget>
  </widget>
  <resources/>
- <connections>
+  <connections>
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>MainWindow</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -215,7 +198,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>MainWindow</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -231,7 +214,7 @@
   <connection>
    <sender>pathList</sender>
    <signal>itemClicked(QListWidgetItem*)</signal>
-   <receiver>Dialog</receiver>
+   <receiver>MainWindow</receiver>
    <slot>itemclick()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -247,7 +230,7 @@
   <connection>
    <sender>cmdAdd</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>MainWindow</receiver>
    <slot>additem()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -263,7 +246,7 @@
   <connection>
    <sender>cmdDelete</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>MainWindow</receiver>
    <slot>removeitem()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -279,7 +262,7 @@
   <connection>
    <sender>cmdSave</sender>
    <signal>clicked()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>MainWindow</receiver>
    <slot>saveitem()</slot>
    <hints>
     <hint type="sourcelabel">

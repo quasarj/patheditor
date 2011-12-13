@@ -2,19 +2,18 @@
 
 # Form implementation generated from reading ui file 'dialog.ui'
 #
-# Created: Tue Dec 13 16:44:51 2011
+# Created: Tue Dec 13 16:54:43 2011
 #      by: pyside-uic 0.2.8 running on PySide 1.0.2
 #
 # WARNING! All changes made in this file will be lost!
 
 from PySide import QtCore, QtGui
 
-class Ui_Dialog(object):
+class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.setGeometry(QtCore.QRect(20, 20, 682, 518))
+        MainWindow.resize(682, 518)
         self.centralwidget = QtGui.QWidget(MainWindow)
-        self.centralwidget.setGeometry(QtCore.QRect(10, 10, 533, 383))
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.centralwidget)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
@@ -79,10 +78,10 @@ class Ui_Dialog(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QtGui.QApplication.translate("Dialog", "Path Edit", None, QtGui.QApplication.UnicodeUTF8))
-        self.cmdDown.setText(QtGui.QApplication.translate("Dialog", "▼", None, QtGui.QApplication.UnicodeUTF8))
-        self.cmdUp.setText(QtGui.QApplication.translate("Dialog", "▲", None, QtGui.QApplication.UnicodeUTF8))
-        self.cmdDelete.setText(QtGui.QApplication.translate("Dialog", "Delete", None, QtGui.QApplication.UnicodeUTF8))
-        self.cmdAdd.setText(QtGui.QApplication.translate("Dialog", "Add", None, QtGui.QApplication.UnicodeUTF8))
-        self.cmdSave.setText(QtGui.QApplication.translate("Dialog", "Save", None, QtGui.QApplication.UnicodeUTF8))
+        MainWindow.setWindowTitle(QtGui.QApplication.translate("MainWindow", "Path Edit", None, QtGui.QApplication.UnicodeUTF8))
+        self.cmdDown.setText(QtGui.QApplication.translate("MainWindow", "▼", None, QtGui.QApplication.UnicodeUTF8))
+        self.cmdUp.setText(QtGui.QApplication.translate("MainWindow", "▲", None, QtGui.QApplication.UnicodeUTF8))
+        self.cmdDelete.setText(QtGui.QApplication.translate("MainWindow", "Delete", None, QtGui.QApplication.UnicodeUTF8))
+        self.cmdAdd.setText(QtGui.QApplication.translate("MainWindow", "Add", None, QtGui.QApplication.UnicodeUTF8))
+        self.cmdSave.setText(QtGui.QApplication.translate("MainWindow", "Save", None, QtGui.QApplication.UnicodeUTF8))
 

@@ -13,106 +13,185 @@
   <property name="windowTitle">
    <string>Path Edit</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>480</y>
-     <width>341</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
-  <widget class="QListWidget" name="pathList">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
+     <x>10</x>
      <y>10</y>
-     <width>571</width>
-     <height>411</height>
+     <width>533</width>
+     <height>383</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>430</y>
-     <width>571</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cmdAdd">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>370</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Add</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cmdSave">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>460</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Save</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cmdDelete">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>400</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Delete</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cmdUp">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>170</y>
-     <width>41</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>▲</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="cmdDown">
-   <property name="geometry">
-    <rect>
-     <x>600</x>
-     <y>210</y>
-     <width>41</width>
-     <height>28</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>▼</string>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QListWidget" name="pathList">
+        <property name="minimumSize">
+         <size>
+          <width>251</width>
+          <height>241</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="minimumSize">
+         <size>
+          <width>91</width>
+          <height>271</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>91</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="cmdDown">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>41</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>▼</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="cmdUp">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>41</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>▲</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="cmdDelete">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>240</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="cmdAdd">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>210</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Add</string>
+         </property>
+        </widget>
+        <zorder>cmdDown</zorder>
+        <zorder>cmdUp</zorder>
+        <zorder>cmdDelete</zorder>
+        <zorder>cmdAdd</zorder>
+        <zorder>pathList</zorder>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>22</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>529</width>
+          <height>70</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>529</width>
+          <height>70</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="cmdSave">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+        <widget class="QDialogButtonBox" name="buttonBox">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>10</y>
+           <width>229</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="standardButtons">
+          <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+         </property>
+        </widget>
+        <zorder>cmdSave</zorder>
+        <zorder>buttonBox</zorder>
+        <zorder>lineEdit</zorder>
+        <zorder>lineEdit</zorder>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
@@ -124,8 +203,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>238</x>
-     <y>294</y>
+     <x>399</x>
+     <y>265</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -140,8 +219,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>306</x>
-     <y>300</y>
+     <x>409</x>
+     <y>271</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
@@ -156,8 +235,8 @@
    <slot>itemclick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>199</x>
-     <y>134</y>
+     <x>539</x>
+     <y>234</y>
     </hint>
     <hint type="destinationlabel">
      <x>355</x>
@@ -172,8 +251,8 @@
    <slot>additem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>308</x>
-     <y>135</y>
+     <x>618</x>
+     <y>375</y>
     </hint>
     <hint type="destinationlabel">
      <x>314</x>
@@ -188,8 +267,8 @@
    <slot>removeitem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>327</x>
-     <y>182</y>
+     <x>637</x>
+     <y>422</y>
     </hint>
     <hint type="destinationlabel">
      <x>311</x>

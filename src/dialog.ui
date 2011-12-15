@@ -178,7 +178,7 @@
   </widget>
  </widget>
  <resources/>
-  <connections>
+ <connections>
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
@@ -186,8 +186,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>399</x>
-     <y>265</y>
+     <x>410</x>
+     <y>473</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -202,8 +202,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>409</x>
-     <y>271</y>
+     <x>410</x>
+     <y>473</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
@@ -234,8 +234,8 @@
    <slot>additem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>618</x>
-     <y>375</y>
+     <x>663</x>
+     <y>244</y>
     </hint>
     <hint type="destinationlabel">
      <x>314</x>
@@ -250,8 +250,8 @@
    <slot>removeitem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>637</x>
-     <y>422</y>
+     <x>663</x>
+     <y>274</y>
     </hint>
     <hint type="destinationlabel">
      <x>311</x>
@@ -266,12 +266,44 @@
    <slot>saveitem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>74</x>
-     <y>258</y>
+     <x>86</x>
+     <y>468</y>
     </hint>
     <hint type="destinationlabel">
      <x>151</x>
      <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdUp</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>moveup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>612</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>678</x>
+     <y>31</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cmdDown</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>movedown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>616</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>676</x>
+     <y>87</y>
     </hint>
    </hints>
   </connection>
@@ -282,5 +314,7 @@
   <slot>removeitem()</slot>
   <slot>saveitem()</slot>
   <slot>do_something()</slot>
+  <slot>moveup()</slot>
+  <slot>movedown()</slot>
  </slots>
 </ui>

@@ -2,7 +2,7 @@
 
 from os import system, environ
 import win32con
-from win32gui import SendMessage
+from win32gui import SendMessageTimeout
 from _winreg import (
     CloseKey, OpenKey, QueryValueEx, SetValueEx,
     HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE,
@@ -38,6 +38,17 @@ def set_env(name, value, user=True):
 #    SendMessage(
 #        win32con.HWND_BROADCAST, win32con.WM_SETTINGCHANGE, 0, 'Environment')
 
+def broadcast_change():
+#    SendMessage(
+#        win32con.HWND_BROADCAST, win32con.WM_SETTINGCHANGE, 0, 'Environment')
+    "Alerting active windows to the settings change..."
+    SendMessageTimeout(
+                       win32con.HWND_BROADCAST, 
+                       win32con.WM_SETTINGCHANGE, 
+                       0, 
+                       'Environment', 
+                       win32con.SMTO_ABORTIFHUNG, 0)
+    
 
 def remove(paths, value):
     while value in paths:
@@ -62,11 +73,14 @@ def prepend_env(name, values, user=True):
 
         set_env(name, ';'.join(paths), user)
 
-def get_path():
-    path = get_env("PATH", user=False)
+def get_path(user=False):
+    path = get_env("PATH", user=user)
     paths = unique(path.split(';'))
 
     return paths
+
+def set_path(paths, user=False):
+    set_env("PATH", ';'.join(paths), user=user)
 
 
 if __name__ == '__main__':

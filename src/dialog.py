@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dialog.ui'
 #
-# Created: Tue Dec 13 16:54:43 2011
+# Created: Wed Dec 14 09:38:37 2011
 #      by: pyside-uic 0.2.8 running on PySide 1.0.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -75,6 +75,8 @@ class Ui_MainWindow(object):
         QtCore.QObject.connect(self.cmdAdd, QtCore.SIGNAL("clicked()"), MainWindow.additem)
         QtCore.QObject.connect(self.cmdDelete, QtCore.SIGNAL("clicked()"), MainWindow.removeitem)
         QtCore.QObject.connect(self.cmdSave, QtCore.SIGNAL("clicked()"), MainWindow.saveitem)
+        QtCore.QObject.connect(self.cmdUp, QtCore.SIGNAL("clicked()"), MainWindow.moveup)
+        QtCore.QObject.connect(self.cmdDown, QtCore.SIGNAL("clicked()"), MainWindow.movedown)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

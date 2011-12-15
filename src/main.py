@@ -28,6 +28,8 @@ class MyMainWindow(QtGui.QMainWindow):
         ret = box.exec_()
 
         if ret == QMessageBox.Yes:
+            envars.set_path(items)
+            envars.broadcast_change()
             QtGui.QApplication.exit()
 
 
@@ -60,6 +62,34 @@ class MyMainWindow(QtGui.QMainWindow):
     def saveitem(self):
         print "Save Item"
         self.ui.pathList.currentItem().setText(self.ui.lineEdit.text())
+
+    def moveup(self):
+        # swap the current item's text with the item above it
+        currentRow = self.ui.pathList.currentRow()
+        if currentRow <= 0:
+            return
+        
+        tempItem = self.ui.pathList.item(currentRow).text()
+        self.ui.pathList.item(currentRow).setText(self.ui.pathList.item(currentRow - 1).text())
+        self.ui.pathList.item(currentRow - 1).setText(tempItem)
+        self.ui.pathList.setCurrentRow(currentRow - 1)
+        
+        print "Moved up"
+    
+    
+    def movedown(self):
+        # swap the current item's text with the item below it
+        currentRow = self.ui.pathList.currentRow()
+        if currentRow >= self.ui.pathList.count() - 1:
+            return
+        
+        tempItem = self.ui.pathList.item(currentRow).text()
+        self.ui.pathList.item(currentRow).setText(self.ui.pathList.item(currentRow + 1).text())
+        self.ui.pathList.item(currentRow + 1).setText(tempItem)
+        self.ui.pathList.setCurrentRow(currentRow + 1)
+        
+        print "Moved down"
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

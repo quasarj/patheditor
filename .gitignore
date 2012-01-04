@@ -1,2 +1,5 @@
 *.pyc
 *.swp
+src/build/*
+src/dist/*
+msvcp90.dll

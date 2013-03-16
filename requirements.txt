@@ -1,0 +1,5 @@
+# Basically you are going to have to install both of these manually on windows.
+# PySide should be at: http://qt-project.org/wiki/PySide
+# pywin32 should be at: http://sourceforge.net/projects/pywin32/files/pywin32/
+PySide
+pywin32
